@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovetronics Robotics Team — Official Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Robotics Background -->
+    <div class="robotics-bg">
+        <div class="robot-part part-1">⚙️</div>
+        <div class="robot-part part-2">🔩</div>
+        <div class="robot-part part-3">⚡</div>
+        <div class="robot-part part-4">🤖</div>
+        <div class="robot-part part-5">💻</div>
+        <div class="robot-part part-6">🔧</div>
+    </div>
+    
+    <!-- Circuit Background -->
+    <div class="circuit-bg"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <span>TEAM LOGO HERE</span>
+                    <small>(Square PNG)</small>
+                </div>
+            </div>
+            <div class="team-name">INNOVETRONICS TEAM</div>
+            <nav class="navbar">
+                <button class="mobile-menu-toggle">☰</button>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#team" class="nav-link">Team</a>
+                    <a href="#departments" class="nav-link">Departments</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE 1: Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">We Build Intelligent Robotics Systems.</h1>
+            <p class="hero-subtitle">Innovetronics consists of 8 engineers specializing in Robotics, AI, Electronics, and Software.</p>
+            <button class="cta-button">Meet The Team</button>
+        </div>
+    </section>
+
+    <!-- PAGE 2: Teams -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Teams</h2>
+
+            <div class="team-box">
+            <!-- Team Leader -->
+            <div class="team-leader-card leader-highlight animate-leader" aria-label="Team leader Omar Gouda">
+                <div class="leader-photo">
+                    <img src="assets/people/omar.jpg" alt="Omar Gouda" class="leader-img"/>
+                </div>
+                <div class="leader-info">
+                    <h3 class="leader-name">Omar Gouda</h3>
+                    <p class="leader-role">Team Leader — Lead AI Engineer</p>
+                    <p class="leader-bio">Leading AI architecture, computer vision research, and system integration across projects.</p>
+                    <div class="leader-links">
+                        <a href="mailto:omar.gouda@innovetronics.com" class="btn small" aria-label="Email Omar">✉️ Email</a>
+                        <a href="https://github.com/omargouda" class="btn small" target="_blank" aria-label="Omar GitHub">🐙 GitHub</a>
+                        <a href="#" class="btn small" target="_blank" aria-label="Omar CV">📄 CV</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teams grid (click to open modal) -->
+            <div class="teams-grid">
+                <div class="dept-logo-card" data-dept="design" role="button" tabindex="0" aria-label="Open Mechanical Design members">
+                    <div class="dept-logo animate-logo">
+                        <img src="assets/logos/mechanical.png" alt="Mechanical Design logo" class="dept-logo-img">
+                    </div>
+                    <h4>Mechanical Design</h4>
+                    <p class="dept-short">CAD, Prototyping, FEA, Manufacturing</p>
+                    <button class="view-members-btn" aria-label="View Mechanical Design members">View Members</button>
+                </div>
+
+                <div class="dept-logo-card" data-dept="ai" role="button" tabindex="0" aria-label="Open AI Department members">
+                    <div class="dept-logo animate-logo">
+                        <img src="assets/logos/ai.png" alt="AI Department logo" class="dept-logo-img">
+                    </div>
+                    <h4>AI Department</h4>
+                    <p class="dept-short">Computer Vision, ML, Neural Networks</p>
+                    <button class="view-members-btn" aria-label="View AI members">View Members</button>
+                </div>
+
+                <div class="dept-logo-card" data-dept="electronics" role="button" tabindex="0" aria-label="Open Electronics members">
+                    <div class="dept-logo animate-logo">
+                        <img src="assets/logos/electronics.png" alt="Electronics logo" class="dept-logo-img">
+                    </div>
+                    <h4>Electronics</h4>
+                    <p class="dept-short">Circuit Design, PCB, Embedded Systems</p>
+                    <button class="view-members-btn" aria-label="View Electronics members">View Members</button>
+                </div>
+
+                <div class="dept-logo-card" data-dept="coding" role="button" tabindex="0" aria-label="Open Software & Coding members">
+                    <div class="dept-logo animate-logo">
+                        <img src="assets/logos/software.png" alt="Software & Coding logo" class="dept-logo-img">
+                    </div>
+                    <h4>Software & Coding</h4>
+                    <p class="dept-short">Firmware, ROS, Backend Tools</p>
+                    <button class="view-members-btn" aria-label="View Software members">View Members</button>
+                </div>
+            </div>
+            <!-- end .team-box -->
+            </div>
+        </div>
+    </section>
+
+            <div class="projects-showcase" style="display:none;">
+                <!-- Keep exactly 6 projects. Each project includes: GitHub, Drive, Media -->
+
+                <!-- Project 01 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">01</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Autonomous Robot Navigation</h3><p class="project-category">AI & Robotics</p></div>
+                        </div>
+                        <div class="project-back-face">
+                            <h3>Project Details</h3>
+                            <p>SLAM-based navigation system for indoor/outdoor autonomous platforms.</p>
+                            <div class="project-resources-grid">
+                                <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">02</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Object Detection System</h3><p class="project-category">Computer Vision</p></div>
+                        </div>
+                        <div class="project-back-face">
+                            <h3>Project Details</h3>
+                            <p>Real-time detection and classification pipeline for industrial inspection.</p>
+                            <div class="project-resources-grid">
+                                <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Gallery"><span class="resource-icon">📸</span><span>Gallery</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">03</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Robotic Arm Controller</h3><p class="project-category">Mechatronics</p></div>
+                        </div>
+                        <div class="project-back-face">
+                            <h3>Project Details</h3>
+                            <p>High-precision arm controller with inverse kinematics and trajectory planning.</p>
+                            <div class="project-resources-grid">
+                                <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">04</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Autonomous Line Follower</h3><p class="project-category">Robotics</p></div>
+                        </div>
+                        <div class="project-back-face">
+                            <h3>Project Details</h3>
+                            <p>Competition-grade line follower using adaptive PID and sensor fusion.</p>
+                            <div class="project-resources-grid">
+                                <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Gallery"><span class="resource-icon">📸</span><span>Gallery</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 05 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">05</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Quadcopter Flight Control</h3><p class="project-category">Embedded Systems</p></div>
+                        </div>
+                        <div class="project-back-face">
+                            <h3>Project Details</h3>
+                            <p>Robust flight control with IMU filtering and waypoint autonomy.</p>
+                            <div class="project-resources-grid">
+                                <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 06 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">06</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Obstacle Avoidance System</h3><p class="project-category">Sensors & AI</p></div>
+                        </div>
+                        <div class="project-back-face">
+                            <h3>Project Details</h3>
+                            <p>Real-time obstacle detection and avoidance using sensor fusion and ML.</p>
+                            <div class="project-resources-grid">
+                                <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Department Members Modal -->
+    <div class="dept-modal" id="deptModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">✕</button>
+            <div class="modal-header">
+                <div class="modal-dept-icon"></div>
+                <h2 class="modal-dept-name"></h2>
+            </div>
+            <div class="modal-skills">
+                <h3>Department Skills</h3>
+                <div class="skills-list"></div>
+            </div>
+            <div class="modal-members">
+                <h3>Team Members</h3>
+                <div class="members-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: Departments Details -->
+    <section id="departments" class="departments-detail-section">
+        <div class="container">
+            <h2 class="section-title">Department Specializations</h2>
+            
+            <!-- (Old visual Design block removed; Mechanical Design block kept below) -->
+
+            <!-- AI Department Detail -->
+            <div class="dept-detail-card ai-detail">
+                <div class="dept-detail-icon">🤖</div>
+                <div class="dept-detail-content">
+                    <h3>Artificial Intelligence Department</h3>
+                    <p>Developing intelligent systems for robotics applications including computer vision, machine learning models, and autonomous control algorithms.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">TensorFlow</span>
+                        <span class="tech-item">PyTorch</span>
+                        <span class="tech-item">OpenCV</span>
+                        <span class="tech-item">YOLO</span>
+                    </div>
+                </div>
+                <div class="neural-network-anim"></div>
+            </div>
+
+            <!-- Electronics Department Detail -->
+            <div class="dept-detail-card electronics-detail">
+                <div class="dept-detail-icon">⚡</div>
+                <div class="dept-detail-content">
+                    <h3>Electronics & Hardware Department</h3>
+                    <p>Designing and implementing electronic circuits, PCB design, power management systems, sensor integration, and motor control.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">Eagle CAD</span>
+                        <span class="tech-item">Altium</span>
+                        <span class="tech-item">Arduino</span>
+                        <span class="tech-item">ESP32</span>
+                    </div>
+                </div>
+                <div class="circuit-wave-anim"></div>
+            </div>
+
+            <!-- Design Department Detail -->
+            <div class="dept-detail-card design-detail">
+                <div class="dept-detail-icon">⚙️</div>
+                <div class="dept-detail-content">
+                    <h3>Mechanical Design Department</h3>
+                    <p>Responsible for mechanical architecture, CAD modeling, prototyping, structural analysis, and manufacturing-ready designs for our robotic platforms.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">SolidWorks</span>
+                        <span class="tech-item">Autodesk Inventor</span>
+                        <span class="tech-item">ANSYS / FEA</span>
+                        <span class="tech-item">3D Printing</span>
+                    </div>
+                </div>
+                <div class="gear-rotation-anim"></div>
+            </div>
+            
+            <!-- Software Department Detail -->
+            <div class="dept-detail-card coding-detail">
+                <div class="dept-detail-icon">💻</div>
+                <div class="dept-detail-content">
+                    <h3>Software & Coding Department</h3>
+                    <p>Developing embedded firmware, control algorithms, ROS nodes, and the backend tools that enable our robotic platforms to operate reliably.</p>
+                    <div class="tech-stack">
+                        <span class="tech-item">C++ (Embedded)</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">ROS</span>
+                        <span class="tech-item">Linux / Real-time</span>
+                    </div>
+                </div>
+                <div class="code-matrix-anim"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 5: Projects - CREATIVE DISPLAY -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Our Innovation Projects</h2>
+            <p class="projects-intro">Explore our cutting-edge robotics projects that push the boundaries of technology</p>
+            
+            <div class="projects-showcase" id="projectsShowcase">
+                <!-- Projects 01..09 -->
+                <!-- Rebuilt cleanly to avoid nested/malformed HTML -->
+                <!-- Project 01 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">01</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Autonomous Robot Navigation</h3><p class="project-category">AI & Robotics</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Advanced SLAM-based navigation for autonomous platforms.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">02</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Object Detection System</h3><p class="project-category">Computer Vision</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Real-time object detection and classification for industrial use.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">03</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Robotic Arm Controller</h3><p class="project-category">Mechatronics</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Precision robotic arm controller with inverse kinematics.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 04 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">04</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Autonomous Line Follower</h3><p class="project-category">Robotics</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Adaptive PID line-following robot for competitive tracks.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 05 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">05</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Quadcopter Flight Control</h3><p class="project-category">Embedded Systems</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Flight control with IMU stabilization and waypoint navigation.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 06 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">06</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Obstacle Avoidance System</h3><p class="project-category">Sensors & AI</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Sensor fusion and ML-based obstacle avoidance.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 07 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">07</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Collaborative Mobile Robot</h3><p class="project-category">Autonomous Systems</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Multi-agent navigation and cooperative behaviors for team tasks.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 08 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">08</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Smart Gripper System</h3><p class="project-category">Mechatronics</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>Adaptive gripper with force feedback for delicate manipulation.</p></div>
+                    </div>
+                </div>
+
+                <!-- Project 09 -->
+                <div class="project-3d-card">
+                    <div class="project-3d-inner">
+                        <div class="project-front-face">
+                            <div class="project-number">09</div>
+                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
+                            <div class="project-info-overlay"><h3>Energy-Efficient Motor Drive</h3><p class="project-category">Power Electronics</p></div>
+                        </div>
+                        <div class="project-back-face"><h3>Project Details</h3><p>High-efficiency motor drive for mobile robotic platforms.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 6: Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="qr-container">
+                        <div class="qr-placeholder">QR Code Here</div>
+                    </div>
+                    <div class="team-socials">
+                        <h3>Follow Us</h3>
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">💼 LinkedIn</a>
+                        <a href="#" class="social-link">📸 Instagram</a>
+                        <a href="#" class="social-link">✉️ Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Innovetronics Robotics Team. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
