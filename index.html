@@ -1,17 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovetronics Robotics Team — Official Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="Logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <!-- Robotics Background -->
     <div class="robotics-bg">
-        <div class="robot-part part-1">⚙️</div>
+        <div class="robot-part part-1">⚙</div>
         <div class="robot-part part-2">🔩</div>
         <div class="robot-part part-3">⚡</div>
         <div class="robot-part part-4">🤖</div>
@@ -28,12 +29,9 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <div class="logo-container">
-                <div class="logo-placeholder">
-                    <span>TEAM LOGO HERE</span>
-                    <small>(Square PNG)</small>
-                </div>
-            </div>
+            <a href="#home" class="logo-container">
+                <img src="Logo.jpg" alt="Innovetronics Team Logo" class="team-logo-img" />
+            </a>
             <div class="team-name">INNOVETRONICS TEAM</div>
             <nav class="navbar">
                 <button class="mobile-menu-toggle">☰</button>
@@ -42,7 +40,15 @@
                     <a href="#team" class="nav-link">Team</a>
                     <a href="#departments" class="nav-link">Departments</a>
                     <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#members" class="nav-link">Members</a>
                     <a href="#contact" class="nav-link">Contact</a>
+                    <!-- About This: small info panel with author/developer credit -->
+                    <div class="nav-about" aria-live="polite">
+                        <button id="aboutToggle" class="about-btn" aria-expanded="false" aria-controls="aboutPanel">About This</button>
+                        <div id="aboutPanel" class="about-panel" role="region" aria-hidden="true">
+                            <p class="about-text">This web made by <strong>Omar Gouda</strong><br>Developed by <strong>Ezzat Mekawy</strong></p>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -50,9 +56,23 @@
 
     <!-- PAGE 1: Hero Section -->
     <section id="home" class="hero-section">
+        <!-- 3D Rotating Robot Cube -->
+        <div class="robot-3d">
+            <div class="cube">
+                <div class="face front">🤖</div>
+                <div class="face back">⚙</div>
+                <div class="face right">🔧</div>
+                <div class="face left">💻</div>
+                <div class="face top">⚡</div>
+                <div class="face bottom">🔩</div>
+            </div>
+        </div>
+        <!-- Three.js 3D Model Container -->
+        <div id="threejs-canvas" class="threejs-canvas" aria-hidden="true"></div>
+        
         <div class="hero-content">
             <h1 class="hero-title">We Build Intelligent Robotics Systems.</h1>
-            <p class="hero-subtitle">Innovetronics consists of 8 engineers specializing in Robotics, AI, Electronics, and Software.</p>
+            <p class="hero-subtitle" data-text="Innovetronics consists of 8 engineers specializing in Robotics, AI, Electronics, and Software."></p>
             <button class="cta-button">Meet The Team</button>
         </div>
     </section>
@@ -62,30 +82,21 @@
         <div class="container">
             <h2 class="section-title">Teams</h2>
 
+            <!-- Department Section Images removed per request: thumbnails kept inside department modals/members -->
+
             <div class="team-box">
-            <!-- Team Leader -->
-            <div class="team-leader-card leader-highlight animate-leader" aria-label="Team leader Omar Gouda">
-                <div class="leader-photo">
-                    <img src="assets/people/omar.jpg" alt="Omar Gouda" class="leader-img"/>
-                </div>
-                <div class="leader-info">
-                    <h3 class="leader-name">Omar Gouda</h3>
-                    <p class="leader-role">Team Leader — Lead AI Engineer</p>
-                    <p class="leader-bio">Leading AI architecture, computer vision research, and system integration across projects.</p>
-                    <div class="leader-links">
-                        <a href="mailto:omar.gouda@innovetronics.com" class="btn small" aria-label="Email Omar">✉️ Email</a>
-                        <a href="https://github.com/omargouda" class="btn small" target="_blank" aria-label="Omar GitHub">🐙 GitHub</a>
-                        <a href="#" class="btn small" target="_blank" aria-label="Omar CV">📄 CV</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Team Leader removed as requested -->
 
             <!-- Teams grid (click to open modal) -->
             <div class="teams-grid">
                 <div class="dept-logo-card" data-dept="design" role="button" tabindex="0" aria-label="Open Mechanical Design members">
                     <div class="dept-logo animate-logo">
-                        <img src="assets/logos/mechanical.png" alt="Mechanical Design logo" class="dept-logo-img">
-                    </div>
+                            <!-- Mechanical Design icon -->
+                            <svg class="dept-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M12 15.5a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" stroke="#00d9ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.4 15a7 7 0 00.6-3 7 7 0 00-.6-3l2.1-1.6-2-3.4-2.4.7a7 7 0 00-2.6-1.5L14 1h-4l-.1 2.2a7 7 0 00-2.6 1.5L4.9 2.9 2.9 6.3 5 7.9a7 7 0 000 6l-2.1 1.6 2 3.4 2.4-.7a7 7 0 002.6 1.5L10 23h4l.1-2.2a7 7 0 002.6-1.5l2.4.7 2-3.4-2.1-1.6z" stroke="#7f00ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" fill="rgba(0,217,255,0.04)"/>
+                            </svg>
+                        </div>
                     <h4>Mechanical Design</h4>
                     <p class="dept-short">CAD, Prototyping, FEA, Manufacturing</p>
                     <button class="view-members-btn" aria-label="View Mechanical Design members">View Members</button>
@@ -93,7 +104,12 @@
 
                 <div class="dept-logo-card" data-dept="ai" role="button" tabindex="0" aria-label="Open AI Department members">
                     <div class="dept-logo animate-logo">
-                        <img src="assets/logos/ai.png" alt="AI Department logo" class="dept-logo-img">
+                        <!-- AI Department icon -->
+                        <svg class="dept-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="3" stroke="#00d9ff" stroke-width="1" fill="rgba(127,0,255,0.03)"/>
+                            <path d="M8 12h8M12 8v8" stroke="#00d9ff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="17" cy="7" r="1" fill="#00d9ff" />
+                        </svg>
                     </div>
                     <h4>AI Department</h4>
                     <p class="dept-short">Computer Vision, ML, Neural Networks</p>
@@ -102,7 +118,11 @@
 
                 <div class="dept-logo-card" data-dept="electronics" role="button" tabindex="0" aria-label="Open Electronics members">
                     <div class="dept-logo animate-logo">
-                        <img src="assets/logos/electronics.png" alt="Electronics logo" class="dept-logo-img">
+                        <!-- Electronics icon -->
+                        <svg class="dept-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="12" cy="12" r="3" stroke="#00d9ff" stroke-width="1.2" fill="rgba(0,217,255,0.04)"/>
+                            <path d="M3 12h4m10 0h4M7.5 8.5l3 3M13.5 12.5l3 3" stroke="#7f00ff" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <h4>Electronics</h4>
                     <p class="dept-short">Circuit Design, PCB, Embedded Systems</p>
@@ -111,7 +131,12 @@
 
                 <div class="dept-logo-card" data-dept="coding" role="button" tabindex="0" aria-label="Open Software & Coding members">
                     <div class="dept-logo animate-logo">
-                        <img src="assets/logos/software.png" alt="Software & Coding logo" class="dept-logo-img">
+                        <!-- Software & Coding icon -->
+                        <svg class="dept-icon" width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M8 9l-4 3 4 3" stroke="#00d9ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 9l4 3-4 3" stroke="#7f00ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="6" y="4" width="12" height="16" rx="2" stroke="#00d9ff" stroke-width="0.9" fill="rgba(127,0,255,0.02)"/>
+                        </svg>
                     </div>
                     <h4>Software & Coding</h4>
                     <p class="dept-short">Firmware, ROS, Backend Tools</p>
@@ -121,6 +146,8 @@
             <!-- end .team-box -->
             </div>
         </div>
+
+        
     </section>
 
             <div class="projects-showcase" style="display:none;">
@@ -139,7 +166,7 @@
                             <p>SLAM-based navigation system for indoor/outdoor autonomous platforms.</p>
                             <div class="project-resources-grid">
                                 <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
-                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂</span><span>Drive</span></a>
                                 <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
                             </div>
                         </div>
@@ -159,7 +186,7 @@
                             <p>Real-time detection and classification pipeline for industrial inspection.</p>
                             <div class="project-resources-grid">
                                 <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
-                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂</span><span>Drive</span></a>
                                 <a href="#" class="resource-item" title="Gallery"><span class="resource-icon">📸</span><span>Gallery</span></a>
                             </div>
                         </div>
@@ -179,7 +206,7 @@
                             <p>High-precision arm controller with inverse kinematics and trajectory planning.</p>
                             <div class="project-resources-grid">
                                 <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
-                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂</span><span>Drive</span></a>
                                 <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
                             </div>
                         </div>
@@ -199,7 +226,7 @@
                             <p>Competition-grade line follower using adaptive PID and sensor fusion.</p>
                             <div class="project-resources-grid">
                                 <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
-                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂</span><span>Drive</span></a>
                                 <a href="#" class="resource-item" title="Gallery"><span class="resource-icon">📸</span><span>Gallery</span></a>
                             </div>
                         </div>
@@ -219,7 +246,7 @@
                             <p>Robust flight control with IMU filtering and waypoint autonomy.</p>
                             <div class="project-resources-grid">
                                 <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
-                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂</span><span>Drive</span></a>
                                 <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
                             </div>
                         </div>
@@ -239,7 +266,7 @@
                             <p>Real-time obstacle detection and avoidance using sensor fusion and ML.</p>
                             <div class="project-resources-grid">
                                 <a href="#" class="resource-item" title="GitHub Repo"><span class="resource-icon">🐙</span><span>GitHub</span></a>
-                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂️</span><span>Drive</span></a>
+                                <a href="#" class="resource-item" title="Drive Resources"><span class="resource-icon">🗂</span><span>Drive</span></a>
                                 <a href="#" class="resource-item" title="Demo Video"><span class="resource-icon">🎥</span><span>Video</span></a>
                             </div>
                         </div>
@@ -309,7 +336,7 @@
 
             <!-- Design Department Detail -->
             <div class="dept-detail-card design-detail">
-                <div class="dept-detail-icon">⚙️</div>
+                <div class="dept-detail-icon">⚙</div>
                 <div class="dept-detail-content">
                     <h3>Mechanical Design Department</h3>
                     <p>Responsible for mechanical architecture, CAD modeling, prototyping, structural analysis, and manufacturing-ready designs for our robotic platforms.</p>
@@ -347,143 +374,195 @@
             <h2 class="section-title">Our Innovation Projects</h2>
             <p class="projects-intro">Explore our cutting-edge robotics projects that push the boundaries of technology</p>
             
-            <div class="projects-showcase" id="projectsShowcase">
-                <!-- Projects 01..09 -->
-                <!-- Rebuilt cleanly to avoid nested/malformed HTML -->
-                <!-- Project 01 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">01</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Autonomous Robot Navigation</h3><p class="project-category">AI & Robotics</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Advanced SLAM-based navigation for autonomous platforms.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 02 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">02</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Object Detection System</h3><p class="project-category">Computer Vision</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Real-time object detection and classification for industrial use.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 03 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">03</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Robotic Arm Controller</h3><p class="project-category">Mechatronics</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Precision robotic arm controller with inverse kinematics.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 04 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">04</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Autonomous Line Follower</h3><p class="project-category">Robotics</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Adaptive PID line-following robot for competitive tracks.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 05 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">05</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Quadcopter Flight Control</h3><p class="project-category">Embedded Systems</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Flight control with IMU stabilization and waypoint navigation.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 06 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">06</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Obstacle Avoidance System</h3><p class="project-category">Sensors & AI</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Sensor fusion and ML-based obstacle avoidance.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 07 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">07</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Collaborative Mobile Robot</h3><p class="project-category">Autonomous Systems</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Multi-agent navigation and cooperative behaviors for team tasks.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 08 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">08</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Smart Gripper System</h3><p class="project-category">Mechatronics</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>Adaptive gripper with force feedback for delicate manipulation.</p></div>
-                    </div>
-                </div>
-
-                <!-- Project 09 -->
-                <div class="project-3d-card">
-                    <div class="project-3d-inner">
-                        <div class="project-front-face">
-                            <div class="project-number">09</div>
-                            <div class="project-thumbnail"><div class="thumbnail-placeholder">Project Image</div></div>
-                            <div class="project-info-overlay"><h3>Energy-Efficient Motor Drive</h3><p class="project-category">Power Electronics</p></div>
-                        </div>
-                        <div class="project-back-face"><h3>Project Details</h3><p>High-efficiency motor drive for mobile robotic platforms.</p></div>
-                    </div>
-                </div>
+            <!-- Projects Filter -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">AI & Vision</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+                <button class="filter-btn" data-filter="hardware">Hardware</button>
+                <button class="filter-btn" data-filter="software">Software</button>
             </div>
+            
+            <div class="projects-showcase" id="projectsShowcase"></div>
         </div>
     </section>
 
-    <!-- PAGE 6: Contact -->
+    <!-- Lightbox Modal for Project Images -->
+    <div class="lightbox" id="projectLightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img class="lightbox-image" src="" alt="Project Image">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title"></h3>
+                <p class="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+            <!-- PAGE: Members (new) -->
+            <section id="members" class="projects-section">
+                <div class="container">
+                    <h2 class="section-title">Members</h2>
+                    <p class="projects-intro">We are 8 students in the Egyptian-Chinese University's Mechatronics Engineering department.</p>
+
+                    <div class="projects-showcase" id="membersShowcase">
+                                    <!-- Member 01: Omar Gouda -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">01</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/omarg.jpg" alt="Omar Gouda" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Omar Gouda</h3><p class="project-category">Team Leader</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Member 02: Ezzat Mekawy -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">02</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/ezzatm.jpg" alt="Ezzat Mekawy" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Ezzat Mekawy</h3><p class="project-category">MCT Engineer</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Member 03: Omar Ali -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">03</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/omar.jpg" alt="Omar Ali" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Omar Ali</h3><p class="project-category">MCT Engineer</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Member 04: Abdelrahman El Komy -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">04</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/komy.jpg" alt="Abdelrahman El Komy" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Abdelrahman El Komy</h3><p class="project-category">MCT Engineer</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Member 05: Ahmed Elamir -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">05</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/amir.jpg" alt="Ahmed Elamir" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Ahmed Elamir</h3><p class="project-category">MCT Engineer</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Member 06: Mohamed Yasser -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">06</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/yasser.jpg" alt="Mohamed Yasser" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Mohamed Yasser</h3><p class="project-category">MCT Engineer</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Member 07: Mohamed Gad -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">07</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/gad.PNG" alt="Mohamed Gad" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Mohamed Gad</h3><p class="project-category">MCT Engineer</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Member 08: Abdalla Mehrez -->
+                                    <div class="project-3d-card">
+                                        <div class="project-3d-inner">
+                                            <div class="project-front-face">
+                                                <div class="project-number">08</div>
+                                                <div class="project-thumbnail"><div class="thumbnail-placeholder"><img src="members/mehrez.jpg" alt="Abdalla Mehrez" style="width:100%;height:100%;object-fit:cover"></div></div>
+                                                <div class="project-info-overlay"><h3>Abdalla Mehrez</h3><p class="project-category">MCT Engineer</p></div>
+                                            </div>
+                                            <div class="project-back-face">
+                                                <h3>Bio</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAGE 6: Contact -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-form-wrapper">
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
                         <button type="submit" class="submit-btn">Send Message</button>
+                        <div class="form-message success-message" id="successMessage"></div>
+                        <div class="form-message error-message-box" id="errorMessage"></div>
                     </form>
                 </div>
                 <div class="contact-info">
                     <div class="qr-container">
-                        <div class="qr-placeholder">QR Code Here</div>
+                        <div class="qr-placeholder">📱 QR Code</div>
                     </div>
                     <div class="team-socials">
                         <h3>Follow Us</h3>
-                        <a href="#" class="social-link">📘 Facebook</a>
-                        <a href="#" class="social-link">💼 LinkedIn</a>
-                        <a href="#" class="social-link">📸 Instagram</a>
-                        <a href="#" class="social-link">✉️ Email</a>
+                        <a href="#" class="social-link" target="_blank">📘 Facebook</a>
+                        <a href="https://www.linkedin.com/company/innovatronicsegy/?viewAsMember=true" class="social-link" target="_blank">💼 LinkedIn</a>
+                        <a href="#" class="social-link" target="_blank">📸 Instagram</a>
+                        <a href="mailto:contact@innovetronics.com" class="social-link">✉ Email</a>
                     </div>
                 </div>
             </div>
@@ -494,6 +573,11 @@
         <p>&copy; 2024 Innovetronics Robotics Team. All Rights Reserved.</p>
     </footer>
 
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <!-- Three.js and OrbitControls (for 3D Robot) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
