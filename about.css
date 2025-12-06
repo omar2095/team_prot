@@ -1,0 +1,94 @@
+/* About panel styles (separate file) */
+.nav-about {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 18px;
+}
+
+.about-btn {
+    background: transparent;
+    color: var(--text-light, #e0e0e0);
+    border: 1px solid rgba(0,217,255,0.12);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+    box-shadow: 0 4px 14px rgba(0,217,255,0.04);
+}
+
+.about-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, rgba(0,217,255,0.06), rgba(0,153,255,0.02));
+}
+
+.about-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 220px;
+    max-width: 320px;
+    background: linear-gradient(180deg, rgba(12,16,35,0.98), rgba(8,10,22,0.96));
+    border: 1px solid rgba(0,217,255,0.08);
+    padding: 12px 14px;
+    border-radius: 10px;
+    box-shadow: 0 18px 50px rgba(0,12,40,0.6), 0 6px 20px rgba(0,217,255,0.04) inset;
+    color: var(--text-light, #e0e0e0);
+    font-size: 13px;
+    line-height: 1.35;
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+    pointer-events: none;
+    transition: opacity 220ms ease, transform 220ms cubic-bezier(.2,.9,.2,1);
+    z-index: 50;
+}
+
+.about-panel.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.about-text { color: var(--text-muted, #a0a0a0); font-size: 13px; }
+
+/* small entrance pulse on the button to draw attention */
+.about-btn.pulse { animation: aboutPulse 3s ease-in-out infinite; }
+@keyframes aboutPulse { 0% { box-shadow: 0 6px 18px rgba(0,217,255,0.04);} 50% { box-shadow: 0 18px 40px rgba(0,217,255,0.08);} 100% { box-shadow: 0 6px 18px rgba(0,217,255,0.04);} }
+
+@media (max-width: 768px) {
+    .nav-about { margin-left: 8px; }
+    .about-panel { right: auto; left: 0; min-width: 180px; }
+}
+
+/* HERO SUBTITLE STYLING & TYPING EFFECT (overrides light) */
+.hero-subtitle {
+    display: block;
+    margin-top: 12px;
+    color: transparent; /* will use background-clip for gradient */
+    font-weight: 500;
+    font-size: 18px;
+    max-width: 720px;
+    text-align: left;
+    background-image: linear-gradient(90deg, rgba(0,217,255,0.98), rgba(127,0,255,0.9));
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(224,224,224,0.15);
+    box-sizing: content-box;
+    align-self: flex-start;
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.hero-subtitle.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* cursor blink effect handled by existing blink caret animation */
+
+@media (max-width: 768px) {
+    .hero-subtitle { font-size: 15px; max-width: 100%; }
+}
